@@ -70,7 +70,7 @@
 Nuestro concepto es una experiencia innovadora donde boista - nuestros clientes - se suscriben a nuestra comunidad para recibir todos los meses los mejores productos y las ultimas tendencias hasta la puerta de su casa u oficina. 
 
  
-Creemos que la grandeza esta en los detalles por eso nos enfocamos en ofrecer un servicio personalizado, puntual y transparente. Vivimos nuestra marca con pasion y dedicacion. Y nuestra prioridad es exceder las expectativas de quienes viven la experiencia SHEER. <strong> TEAM SHEER </strong>  </strong>
+Creemos que la grandeza esta en los detalles por eso nos enfocamos en ofrecer un servicio personalizado, puntual y transparente. Vivimos nuestra marca con pasion y dedicacion. Y nuestra prioridad es exceder las expectativas de quienes viven la experiencia SHEER. <strong> TEAM SHEER </strong> </p> </strong>
 					</font><footer>
 						<a href="#one" class="button style2 down">More</a>
 					</footer>
