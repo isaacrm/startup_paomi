@@ -1,0 +1,28 @@
+<?php
+	require_once("conexion.php");
+	$conexion = conectaDB(); //establecer conexion en base de datos
+	$nombre = $_POST['nombre'];
+	$apellido = $_POST['apellido'];
+	$fecha = $_POST['fecha'];
+	$direccion = $_POST['direccion'];
+	$dui = $_POST['dui'];
+	$usuario = $_POST['usuario'];
+	$correo = $_POST['correo'];
+	$contraseña = $_POST['contra'];
+	$tipo = $_POST['tipo'];
+	$sql_query = $conexion->prepare("insert into clientes (nombre_cliente, apellidos_cliente, fecha_nacimiento, Dui_cliente, direccion_cliente, correo_cliente, nombre_usuario, contrasena_cliente, id_tipo_cliente)values(?,?,?,?,?,?,?,?,?)");
+	$sql_query->bindParam(1, $nombre);
+	$sql_query->bindParam(2, $apellido);
+	$sql_query->bindParam(3, $fecha);
+	$sql_query->bindParam(4, $dui);
+	$sql_query->bindParam(5, $direccion);
+	$sql_query->bindParam(6, $correo);
+	$sql_query->bindParam(7, $usuario);
+	$sql_query->bindParam(8, $contraseña);
+	$sql_query->bindParam(9, $tipo);
+	if($sql_query->execute() > 0)
+	{
+		header("location: consulta_cliente.php");
+	}
+	
+?>

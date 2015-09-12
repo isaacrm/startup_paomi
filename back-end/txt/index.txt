@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<!--
+	Sheer pagina estructura 1 by HTML5 UP
+	html5up.net | @n33co
+-->
+<html>
+	<head>
+<link rel="shortcut icon" href="mini.png" type="images/png" />
+<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="fonts.css">		
+<title>Sheer: Beauty By You </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.scrollex.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+			<link rel="stylesheet" href="css/style-normal.css" />
+			<link rel="stylesheet" href="bootstrap/bootstrap.css" />
+		</noscript>
+
+	</head>
+	<body>
+		<!-- Header -->
+			<header id="header">
+				<!-- logo -->
+					<figure> <?php echo $_SESSION['usuario'];?></figure>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="tipo_cliente.php">Tipo Clientes</a></li>
+                            <li><a href="cliente.php">Clientes</a></li>
+                            <li><a href="tproductos.php">Tipo Productos</a></li>
+                            <li><a href="productos.php">Productos</a></li>
+                             <li><a href="cargo.php">Cargos Empleados</a></li>
+                            <li><a href="empleados.php">Empleados</a></li>
+                            <li><a href="cerrar_sesion.php">Cerrar sesion</a></li>
+						</ul>
+					</nav>
+			</header>
+			<div class="div" style="widht:100%; height:170px;"></div>
+			<img src="images/logo.png" style="position:center; width:450px; height:450px; ">
+		</body>
+</html>

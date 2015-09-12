@@ -1,0 +1,17 @@
+<?php
+	require_once("conexion.php");
+	$conexion = conectaDB(); //establecer conexion en base de datos
+	$producto = $_POST['producto'];
+	$precio = $_POST['precio'];
+	$marca = $_POST['marca'];
+	$tipo = $_POST['tipo'];
+	$sql_query = $conexion->prepare("insert into productos(precio, nombre_producto, marca_producto, id_tipo_producto)values(?,?,?,?)");
+	$sql_query->bindParam(1, $precio);
+	$sql_query->bindParam(2, $producto);
+	$sql_query->bindParam(3, $marca);
+	$sql_query->bindParam(4, $tipo);
+	if($sql_query->execute() > 0)
+	{
+		header("location: consulta_producto.php");
+	}
+?>

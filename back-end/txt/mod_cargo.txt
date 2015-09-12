@@ -1,0 +1,8 @@
+<?php
+	require_once("conexion.php");
+	$conexion = conectaDB();
+	$sql = $conexion->prepare("update cargo_emp set nombre_cargo='".$_POST['nombre']."', descripcion='".$_POST['desc']."' where id_cargo =".$_POST['ids']);
+	$sql->execute();
+	
+	header("location: consulta_cargo.php");
+?>

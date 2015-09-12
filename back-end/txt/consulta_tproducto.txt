@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ 	<mea charset="utf-8">
+ 	<title>Consulta Tipo Productos</title>
+ 	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+ </head>
+ <body>
+ 	<br><br><center><img src="images/logo.png" style="position:center; width:150px; height:150px; "></center>
+ 	<br><br><center><h1 style="color:#222;">Consulta Tipo Productos</h1><br><a href="tproductos.php" class="btn btn-danger">Volver</a></center><br><br>
+ 	<div class="container" style="overflow-Y:scroll; height:300px; width:100%;">
+ 		<table class="table table-bordered" >
+		 	<thead>
+		        <tr>
+		            <th>Tipo de Producto</th>
+		            <th>Descripcion</th>
+		            <th>ID</th>
+		            <th>Operaciones</th>
+		        </tr>
+		    </thead>
+		 	<?php
+		 		require_once("conexion.php");
+		 		$conexion = conectaDB();
+		 		require 'libs/Zebra_Pagination.php';
+		 		$sql = $conexion->prepare("select count(*) from tipo_productos");
+		 		$sql->execute();
+		 		$contador = $sql->fetchColumn(0);
+		 		$paginacion = new Zebra_Pagination();
+		 		$paginacion->records($contador);
+		 		$resultados_con = 2;
+		 		$paginacion->records_per_page($resultados_con);
+		 		$sql = $conexion->prepare('select * from tipo_productos  LIMIT '.$paginacion->get_page().','.$resultados_con);/*COMIENZO DE LA PAGINACION*/
+		 		$sql->execute();
+		 		$resultado = $sql->fetchAll();
+		 		foreach ($resultado as $filas) {
+		 			echo '
+		 				<tbody>
+					        <tr>
+					            <td>'.$filas['tipo_producto'].'</td>
+					            <td>'.$filas['descripcion'].'</td>
+					            <td>'.$filas['id_tipo_producto'].'</td>
+					            <td><p><a href="modificar_tproductos.php?id='.$filas['id_tipo_producto'].'" class="btn btn-danger">Modificar</a> <a href="eliminar_tproducto.php?id='.$filas['id_tipo_producto'].'" class="btn btn-danger">Eliminar</a></p></td>
+					        </tr>
+					    </tbody>   
+		 			';
+		 		}
+		 	?>
+		 	</table>
+		 	<?php $paginacion->render();?>
+ 	</div>
+ </body>
+ </html> 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tipo Productos</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.css">
+</head>
+<body>
+    <br><center><img src="images/logo.png" style="position:center; width:150px; height:150px; "></center>
+	<center><h1 style="color:#222;">Tipo Productos</h1><br><a href="index.php" class="btn btn-danger">Volver</a></center>
+
+	<form action="ingresar_tproductos.php" method="POST" class="container">
+	  <div class="form-group">
+	    <label for="">Tipo Producto</label>
+	    <input type="text" class="form-control" name="nombre" placeholder="Nombre" required/>
+	  </div>
+	  <div class="form-group">
+	    <label for="">Descripcion</label>
+	    <textarea name="desc" class="form-control" rows="3"></textarea>
+	  </div>
+	  <button type="submit" class="btn btn-danger">Ingresar</button>
+	  <a href="consulta_tproducto.php" class="btn btn-danger">Consultar</a>
+	</form>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

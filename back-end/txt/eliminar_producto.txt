@@ -1,0 +1,9 @@
+<?php
+	require_once("conexion.php");
+	$conexion = conectaDB();
+	$sql = $conexion->prepare("delete from productos where id_producto=".$_GET['id']);
+	if($sql->execute() > 0)
+	{
+		header("location: consulta_producto.php");
+	}
+?>

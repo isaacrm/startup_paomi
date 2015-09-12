@@ -1,0 +1,14 @@
+<?php
+	require_once("conexion.php");
+	$conexion = conectaDB(); //establecer conexion en base de datos
+	$nombre = $_POST['cargo'];
+	$desc = $_POST['desc'];
+	$sql_query = $conexion->prepare("insert into cargo_emp (nombre_cargo, descripcion)values(?,?)");
+	$sql_query->bindParam(1, $nombre);
+	$sql_query->bindParam(2, $desc);
+	if($sql_query->execute() > 0)
+	{
+		header("location: consulta_cargo.php");
+	}
+	
+?>

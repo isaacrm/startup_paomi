@@ -1,0 +1,17 @@
+<?php
+	require_once("conexion.php");
+	$conexion = conectaDB();
+	$sql = $conexion->prepare("delete from tipo_cliente where id_tipo_cliente=".$_GET['id']);
+	if($sql->execute() > 0)
+	{
+		header("location: consulta_tcliente.php");
+	}
+	else
+	{
+		echo '<script type="text/javascript">
+			alert("El campo esta relacionado");
+		</script>';
+		header("location: consulta_tcliente.php");
+	}
+?>
+

@@ -1,0 +1,9 @@
+<?php
+	require_once("conexion.php");
+	$conexion = conectaDB();
+	$sql = $conexion->prepare("delete from cargo_emp where id_cargo=".$_GET['id']);
+	if($sql->execute() > 0)
+	{
+		header("location: consulta_cargo.php");
+	}
+?>
