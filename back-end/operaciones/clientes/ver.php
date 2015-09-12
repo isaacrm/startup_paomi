@@ -6,8 +6,8 @@ if(!isset($_SESSION['id'])){
 }
 ?>
 <?php include '../../maestros/cabecera.php' ?>
+<?php include 'buscar.php' ?>
 <?php include '../../maestros/sidebar.php' ?>
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
@@ -19,8 +19,8 @@ if(!isset($_SESSION['id'])){
 
 	<!-- Main content -->
 	<section class="content">
-		<div class="container" style="overflow-Y:scroll; height:300px; width:100%;">
-			<table class="table table-bordered" >
+		<a href="ingresar.php" class="btn btn-primary">Nuevo</a>
+		<table class="table table-bordered" >
 				<thead>
 				<tr>
 					<th>Nombre</th>
@@ -58,7 +58,7 @@ if(!isset($_SESSION['id'])){
 					            <td>'.$filas['Dui_cliente'].'</td>
 					            <td>'.$filas['nombre_usuario'].'</td>
 					            <td>'.$filas['correo_cliente'].'</td>
-					            <td><p><a href="modificar_cliente.php?id='.$filas['id_cliente'].'" class="btn btn-danger">Modificar</a> <a href="eliminar_cliente.php?id='.$filas['id_cliente'].'" class="btn btn-danger">Eliminar</a></p></td>
+					            <td><p><a href="modificar.php?id='.$filas['id_cliente'].'" class="btn btn-warning">Consultar/Modificar</a> <a href="eliminar.php?id='.$filas['id_cliente'].'" class="btn btn-danger">Eliminar</a></p></td>
 					        </tr>
 					    </tbody>
 		 			';
@@ -66,7 +66,6 @@ if(!isset($_SESSION['id'])){
 				?>
 			</table>
 			<?php $paginacion->render();?>
-		</div>
 
 	</section><!-- /.content -->
 </div><!-- /.content-wrapper -->

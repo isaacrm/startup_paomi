@@ -18,8 +18,9 @@ if(!isset($_SESSION['id'])){
 
 	<!-- Main content -->
 	<section class="content">
-		<div class="container" style="overflow-Y:scroll; height:300px; width:100%;">
-			<table class="table table-bordered" >
+		<a href="ingresar.php" class="btn btn-primary">Nuevo</a>
+
+			<table class="table table-striped table-bordered table-hover" >
 				<thead>
 				<tr>
 					<th>Cargo</th>
@@ -49,7 +50,7 @@ if(!isset($_SESSION['id'])){
 					        <tr>
 					            <td>'.$filas['nombre_cargo'].'</td>
 					            <td>'.$filas['descripcion'].'</td>
-					            <td><p><a href="modificar_cargo.php?id='.$filas['id_cargo'].'" class="btn btn-danger">Modificar</a> <a href="eliminar_cargo.php?id='.$filas['id_cargo'].'" class="btn btn-danger">Eliminar</a></p></td>
+					            <td><p><a href="modificar.php?id='.$filas['id_cargo'].'" class="btn btn-warning">Consultar/Modificar</a> <a href="eliminar.php?id='.$filas['id_cargo'].'" class="btn btn-danger">Eliminar</a></p></td>
 					        </tr>
 					    </tbody>
 		 			';
@@ -57,7 +58,7 @@ if(!isset($_SESSION['id'])){
 				?>
 			</table>
 			<?php $paginacion->render();?>
-		</div>
+
 
 	</section><!-- /.content -->
 </div><!-- /.content-wrapper -->

@@ -18,7 +18,6 @@ if(!isset($_SESSION['id'])){
 
 	<!-- Main content -->
 	<section class="content">
-		<div class="container" style="overflow-Y:scroll; height:300px; width:100%;">
 			<table class="table table-bordered" >
 				<thead>
 				<tr>
@@ -65,7 +64,6 @@ if(!isset($_SESSION['id'])){
 				?>
 			</table>
 			<?php $paginacion->render();?>
-		</div>
 
 	</section><!-- /.content -->
 </div><!-- /.content-wrapper -->
