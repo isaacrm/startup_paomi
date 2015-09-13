@@ -29,11 +29,9 @@
 			<li><a href="http://www.facebook.com/SheerBoxes" target="_blank" class="icon-facebook2"></a></li>
 			<li><a href="http://www.twitter.com/" target="_blank" class="icon-twitter"></a></li>
 			<li><a href="http://www.instagram.com/" target="_blank" class="icon-instagram"></a></li>
-			
+
 		</ul>
 	</div>
-		
-
 		<!-- Header -->
 			<header id="header">
 
@@ -46,13 +44,12 @@
 						<ul>
 							<li><a href="#intro">Sheer</a></li>
 							<li><a href="#one">Que Es Sheer Boxes</a></li>
-							<li><a href="#plus">Ahorra</a></li>
-                                                        <li><a href="#two">Nuestro Concepto</a></li>
-	                                                <li><a href="#marcas">Marcas</a></li>
-	                                                <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
-	                                                <li><a href="#contact">Contactanos</a></li>
-                                                     <li><a href="creadoras.html">Las Creadoras</a></li>   
-                                                      
+							<li><a href="#plus">Suscripcion</a></li>
+                            <li><a href="#two">Nuestro Concepto</a></li>
+							<li><a href="#marcas">Productos</a></li>
+							<li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+							<li><a href="#contact">Contactanos</a></li>
+							<li><a href="creadoras.html">Las Creadoras</a></li>
 						</ul>
 					</nav>
 
@@ -92,37 +89,60 @@ Creemos que la grandeza esta en los detalles por eso nos enfocamos en ofrecer un
 
 			<section id="plus" class="carousel"> 
 				<div class="reel"><CENTER>
-
 					<article>
-
 						<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
 						<header>
 							<h3><a href="#">Ahorras $5</a></h3>
 						</header>
-						<p>Suscribete por tres meses a nuestro plan y <strong>recibe 5 productos cada mes por 40 dolares</strong></p>							
-					
-                                        </article>
+						<p>Suscribete por tres meses a nuestro plan y <strong>recibe 5 productos cada mes por 40 dolares</strong></p>
+						<form method="post" action="#">
+							<div class="row">
+								<div class="12u">
+									<ul class="actions">
+										<li><input type="submit" value="Suscribirme 3 meses" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</article>
 				
 					<article> 
 						<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
 						<header>
 							<h3><a href="#">Ahorras $15</a></h3>
 						</header>
-						<p>Suscribete a nuestro plan de 6 meses y recibe 5 de nuestros productos cada mes por 75 dolares</p>							
-				       </article>
-				
+						<p>Suscribete a nuestro plan de 6 meses y recibe 5 de nuestros productos cada mes por 75 dolares</p>
+						<form method="post" action="#">
+							<div class="row">
+								<div class="12u">
+									<ul class="actions">
+										<li><input type="submit" value="Suscribirme 6 meses" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</article>
 					<article>
 						<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
 						<header>
 							<h3><a href="#">Ahorras $25</a></h3>
 						</header>
-						<p>Suscribete a nuestro plan de 12 meses y recibe 5 de nuestros productos cada mes por 125 dolares</p>							
+						<p>Suscribete a nuestro plan de 12 meses y recibe 5 de nuestros productos cada mes por 125 dolares</p>
+						<form method="post" action="#">
+							<div class="row">
+								<div class="12u">
+									<ul class="actions">
+										<li><input type="submit" value="Suscribirme 1 anio" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
 					</article>
 </CENTER>
 				</div>
 			</section>
 
-		<!-- Two 
+		<!-- Two
 			<section id="two" class="main style2 left dark fullscreen">
 				<div class="content box style2">
 					<header>
@@ -230,16 +250,8 @@ Creemos que la grandeza esta en los detalles por eso nos enfocamos en ofrecer un
 				</div>
 			</section>
 
-		
-
-
-				
-
-
-				 
 			<!-- Footer -->
 			<footer id="footer">
-
 </footer>
 
 	</body>
