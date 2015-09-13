@@ -6,6 +6,7 @@ if(!isset($_SESSION['id'])){
 }
 ?>
 <?php include '../../maestros/cabecera.php' ?>
+<?php include 'buscar.php' ?>
 <?php include '../../maestros/sidebar.php' ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
