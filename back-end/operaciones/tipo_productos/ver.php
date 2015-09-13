@@ -6,6 +6,7 @@ if(!isset($_SESSION['id'])){
 }
 ?>
 <?php include '../../maestros/cabecera.php' ?>
+<?php include 'buscar.php' ?>
 <?php include '../../maestros/sidebar.php' ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -19,12 +20,11 @@ if(!isset($_SESSION['id'])){
 	<!-- Main content -->
 	<section class="content">
 		<a href="ingresar.php" class="btn btn-primary">Nuevo</a>
-			<table class="table table-bordered" >
+			<table class="table table-striped table-bordered table-hover" >
 				<thead>
 				<tr>
 					<th>Tipo de Producto</th>
 					<th>Descripcion</th>
-					<th>ID</th>
 					<th>Operaciones</th>
 				</tr>
 				</thead>
@@ -50,8 +50,7 @@ if(!isset($_SESSION['id'])){
 					        <tr>
 					            <td>'.$filas['tipo_producto'].'</td>
 					            <td>'.$filas['descripcion'].'</td>
-					            <td>'.$filas['id_tipo_producto'].'</td>
-					            <td><p><a href="modificar_tproductos.php?id='.$filas['id_tipo_producto'].'" class="btn btn-danger">Modificar</a> <a href="eliminar_tproducto.php?id='.$filas['id_tipo_producto'].'" class="btn btn-danger">Eliminar</a></p></td>
+					            <td><p><a href="modificar.php?id='.$filas['id_tipo_producto'].'" class="btn btn-warning">Modificar</a> <a href="eliminar.php?id='.$filas['id_tipo_producto'].'" class="btn btn-danger">Eliminar</a></p></td>
 					        </tr>
 					    </tbody>
 		 			';

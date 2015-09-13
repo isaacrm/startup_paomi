@@ -6,6 +6,7 @@ if(!isset($_SESSION['id'])){
 }
 ?>
 <?php include '../../maestros/cabecera.php' ?>
+<?php include 'buscar.php' ?>
 <?php include '../../maestros/sidebar.php' ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -19,7 +20,7 @@ if(!isset($_SESSION['id'])){
 	<!-- Main content -->
 	<section class="content">
 		<a href="ingresar.php" class="btn btn-primary">Nuevo</a>
-			<table class="table table-bordered" >
+			<table class="table table-striped table-bordered table-hover" >
 				<thead>
 				<tr>
 					<th>Nombre</th>
@@ -57,7 +58,7 @@ if(!isset($_SESSION['id'])){
 					            <td>'.$filas['DUI_empleado'].'</td>
 					            <td>'.$filas['usuario_empleado'].'</td>
 					            <td>'.$filas['correo_empleado'].'</td>
-					            <td><p><a href="modificar_empleados.php?id='.$filas['id_empleado'].'" class="btn btn-danger">Modificar</a> <a href="eliminar_empleado.php?id='.$filas['id_empleado'].'" class="btn btn-danger">Eliminar</a></p></td>
+					            <td><p><a href="modificar.php?id='.$filas['id_empleado'].'" class="btn btn-warning">Modificar</a> <a href="eliminar.php?id='.$filas['id_empleado'].'" class="btn btn-danger">Eliminar</a></p></td>
 					        </tr>
 					    </tbody>
 		 			';

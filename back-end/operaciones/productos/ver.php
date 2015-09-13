@@ -6,6 +6,7 @@ if(!isset($_SESSION['id'])){
 }
 ?>
 <?php include '../../maestros/cabecera.php' ?>
+<?php include 'buscar.php' ?>
 <?php include '../../maestros/sidebar.php' ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -19,7 +20,7 @@ if(!isset($_SESSION['id'])){
 	<!-- Main content -->
 	<section class="content">
 		<a href="ingresar.php" class="btn btn-primary">Nuevo</a>
-			<table class="table table-bordered" >
+			<table class="table table-striped table-bordered table-hover" >
 				<thead>
 				<tr>
 					<th>Producto</th>
@@ -42,7 +43,7 @@ if(!isset($_SESSION['id'])){
 				$paginacion->records($contador);
 				$paginacion->records_per_page($filas);
 				$paginacion->padding(false);
-				$sql = $conexion->prepare('select * from productos LIMIT '. (($paginacion->get_page() - 1) * $filas) . ', ' . $filas);
+				$sql = $conexion->prepare('select * from productos  LIMIT '. (($paginacion->get_page() - 1) * $filas) . ', ' . $filas);
 				$sql->execute();
 				$resultado = $sql->fetchAll();
 				foreach ($resultado as $filas) {
@@ -54,8 +55,8 @@ if(!isset($_SESSION['id'])){
 					            <td>'.$filas['marca_producto'].'</td>
 					            <td>'.$filas['id_producto'].'</td>
 
-					            <td><p><a href="modificar_productos.php?id='.$filas['id_producto'].'" class="btn btn-danger">Modificar</a>
-					            <a href="eliminar_producto.php?id='.$filas['id_producto'].'" class="btn btn-danger">Eliminar</a></p></td>
+					            <td><p><a href="modificar.php?id='.$filas['id_producto'].'" class="btn btn-warning">Modificar</a>
+					            <a href="eliminar.php?id='.$filas['id_producto'].'" class="btn btn-danger">Eliminar</a></p></td>
 					        </tr>
 					    </tbody>
 		 			';

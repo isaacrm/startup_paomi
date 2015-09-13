@@ -13,7 +13,7 @@ if(!isset($_SESSION['id'])){
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Tipos de Clientes
+                Tipos de Productos
             </h1>
         </section>
 
@@ -24,7 +24,7 @@ if(!isset($_SESSION['id'])){
             <table class="table table-striped table-bordered table-hover" >
                 <thead>
                 <tr>
-                    <th>T. Cliente</th>
+                    <th>Tipo de Producto</th>
                     <th>Descripcion</th>
                     <th>Operaciones</th>
                 </tr>
@@ -38,7 +38,7 @@ if(!isset($_SESSION['id'])){
                 }
                 else  if ( $_POST['filtro']!=""){
                 require '../../libs/Zebra_Pagination.php';
-                $sql = $conexion->prepare("select count(*) from tipo_cliente ");
+                $sql = $conexion->prepare("select count(*) from tipo_productos");
                 $sql->execute();
                 $contador = $sql->fetchColumn(0);
                 /*Numero de registros que se quiere por tabla*/
@@ -47,17 +47,16 @@ if(!isset($_SESSION['id'])){
                 $paginacion->records($contador);
                 $paginacion->records_per_page($filas);
                 $paginacion->padding(false);
-                $sql = $conexion->prepare('select id_tipo_cliente, tipo_cliente, descripcion from tipo_cliente where tipo_cliente LIKE "%' . $_POST['filtro'] . '%" LIMIT '. (($paginacion->get_page() - 1) * $filas) . ', ' . $filas);
+                $sql = $conexion->prepare('select * from tipo_productos where tipo_producto LIKE "%' . $_POST['filtro'] . '%"  LIMIT '. (($paginacion->get_page() - 1) * $filas) . ', ' . $filas);
                 $sql->execute();
                 $resultado = $sql->fetchAll();
                 foreach ($resultado as $filas) {
                     echo '
 		 				<tbody>
 					        <tr>
-					            <td>'.$filas['tipo_cliente'].'</td>
+					            <td>'.$filas['tipo_producto'].'</td>
 					            <td>'.$filas['descripcion'].'</td>
-					            <td><p><a href="modificar_tcliente.php?id='.$filas['id_tipo_cliente'].'" class="btn btn-warning">Consultar/Modificar</a>
-					             <a href="eliminar_tcliente.php?id='.$filas['id_tipo_cliente'].'" class="btn btn-danger">Eliminar</a></p></td>
+					            <td><p><a href="modificar.php?id='.$filas['id_tipo_producto'].'" class="btn btn-warning">Modificar</a> <a href="eliminar.php?id='.$filas['id_tipo_producto'].'" class="btn btn-danger">Eliminar</a></p></td>
 					        </tr>
 					    </tbody>
 		 			';
