@@ -1,9 +1,0 @@
-<?php
-	require_once("conexion.php");
-	$conexion = conectaDB();
-	$sql = $conexion->prepare("delete from empleados where id_empleado=".$_GET['id']);
-	if($sql->execute() > 0)
-	{
-		header("location: consultar_empleados.php");
-	}
-?>

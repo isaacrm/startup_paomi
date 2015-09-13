@@ -1,9 +1,0 @@
-<?php
-	require_once("conexion.php");
-	$conexion = conectaDB();
-	$sql = $conexion->prepare("delete from clientes where id_cliente=".$_GET['id']);
-	if($sql->execute() > 0)
-	{
-		header("location: consulta_cliente.php");
-	}
-?>

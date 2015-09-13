@@ -18,6 +18,7 @@ if(!isset($_SESSION['id'])){
 
 	<!-- Main content -->
 	<section class="content">
+		<a href="ingresar.php" class="btn btn-primary">Nuevo</a>
 			<table class="table table-bordered" >
 				<thead>
 				<tr>

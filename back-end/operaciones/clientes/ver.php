@@ -20,15 +20,13 @@ if(!isset($_SESSION['id'])){
 	<!-- Main content -->
 	<section class="content">
 		<a href="ingresar.php" class="btn btn-primary">Nuevo</a>
-		<table class="table table-bordered" >
+		<table class="table table-striped table-bordered table-hover" >
 				<thead>
 				<tr>
 					<th>Nombre</th>
 					<th>Apellido</th>
-					<th>Direccion</th>
 					<th>DUI</th>
 					<th>Usuario</th>
-					<th>Correo</th>
 					<th>Operaciones</th>
 				</tr>
 				</thead>
@@ -54,10 +52,8 @@ if(!isset($_SESSION['id'])){
 					        <tr>
 					            <td>'.$filas['nombre_cliente'].'</td>
 					            <td>'.$filas['apellidos_cliente'].'</td>
-					            <td>'.$filas['direccion_cliente'].'</td>
 					            <td>'.$filas['Dui_cliente'].'</td>
 					            <td>'.$filas['nombre_usuario'].'</td>
-					            <td>'.$filas['correo_cliente'].'</td>
 					            <td><p><a href="modificar.php?id='.$filas['id_cliente'].'" class="btn btn-warning">Consultar/Modificar</a> <a href="eliminar.php?id='.$filas['id_cliente'].'" class="btn btn-danger">Eliminar</a></p></td>
 					        </tr>
 					    </tbody>
