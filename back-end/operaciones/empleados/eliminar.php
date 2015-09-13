@@ -22,7 +22,7 @@ if(!empty($_POST)) {
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Eliminar Cargo
+                Eliminar Empleado
             </h1>
         </section>
 
