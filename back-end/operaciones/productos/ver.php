@@ -55,7 +55,7 @@ if(!isset($_SESSION['id'])){
 					            <td>'.$filas['marca_producto'].'</td>
 					            <td>'.$filas['id_producto'].'</td>
 
-					            <td><p><a href="modificar.php?id='.$filas['id_producto'].'" class="btn btn-warning">Modificar</a>
+					            <td><p><a href="modificar.php?id='.$filas['id_producto'].'" class="btn btn-warning">Consultar/Modificar</a>
 					            <a href="eliminar.php?id='.$filas['id_producto'].'" class="btn btn-danger">Eliminar</a></p></td>
 					        </tr>
 					    </tbody>

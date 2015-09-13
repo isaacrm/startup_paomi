@@ -25,10 +25,8 @@ if(!isset($_SESSION['id'])){
 				<tr>
 					<th>Nombre</th>
 					<th>Apellido</th>
-					<th>Direccion</th>
 					<th>DUI</th>
 					<th>Usuario</th>
-					<th>Correo</th>
 					<th>Operaciones</th>
 				</tr>
 				</thead>
@@ -54,11 +52,9 @@ if(!isset($_SESSION['id'])){
 					        <tr>
 					            <td>'.$filas['nombres_empleado'].'</td>
 					            <td>'.$filas['apellidos_empleado'].'</td>
-					            <td>'.$filas['direccion_empleado'].'</td>
 					            <td>'.$filas['DUI_empleado'].'</td>
 					            <td>'.$filas['usuario_empleado'].'</td>
-					            <td>'.$filas['correo_empleado'].'</td>
-					            <td><p><a href="modificar.php?id='.$filas['id_empleado'].'" class="btn btn-warning">Modificar</a> <a href="eliminar.php?id='.$filas['id_empleado'].'" class="btn btn-danger">Eliminar</a></p></td>
+					            <td><p><a href="modificar.php?id='.$filas['id_empleado'].'" class="btn btn-warning">Consultar/Modificar</a> <a href="eliminar.php?id='.$filas['id_empleado'].'" class="btn btn-danger">Eliminar</a></p></td>
 					        </tr>
 					    </tbody>
 		 			';
