@@ -37,6 +37,10 @@ if(!isset($_SESSION['id'])){
                 if(!empty($_POST)) {
                 require_once("../../conexion.php");
                 $conexion = conectaDB();
+                if  ( $_POST['filtro']==""){
+                    echo '<p class="alert bg-danger">Ingrese un valor</p>';
+                }
+                else  if ( $_POST['filtro']!=""){
                     require '../../libs/Zebra_Pagination.php';
                     $sql = $conexion->prepare("select count(*) from  clientes");
                     $sql->execute();
@@ -67,8 +71,8 @@ if(!isset($_SESSION['id'])){
                     }
                 ?>
             </table>
-            <?php $paginacion->render();}?>
-
+            <?php $paginacion->render();?>
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
-<?php include '../../maestros/footer.php'?>
+<?php include '../../maestros/footer.php' ;}}?>
+
