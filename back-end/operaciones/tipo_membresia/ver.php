@@ -13,7 +13,7 @@ if(!isset($_SESSION['id'])){
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
 		<h1>
-			Tipos de Clientes
+			Tipos de Membresia
 		</h1>
 	</section>
 
@@ -23,7 +23,7 @@ if(!isset($_SESSION['id'])){
 			<table class="table table-striped table-bordered table-hover" >
 				<thead>
 				<tr>
-					<th>T. Cliente</th>
+					<th>T. Membresia</th>
 					<th>Descripcion</th>
 					<th>Operaciones</th>
 				</tr>
@@ -32,7 +32,7 @@ if(!isset($_SESSION['id'])){
 				require_once("../../conexion.php");
 				$conexion = conectaDB();
 				require '../../libs/Zebra_Pagination.php';
-				$sql = $conexion->prepare("select count(*) from tipo_cliente ");
+				$sql = $conexion->prepare("select count(*) from tipo_membresia ");
 				$sql->execute();
 				$contador = $sql->fetchColumn(0);
 				/*Numero de registros que se quiere por tabla*/
@@ -41,15 +41,15 @@ if(!isset($_SESSION['id'])){
 				$paginacion->records($contador);
 				$paginacion->records_per_page($filas);
 				$paginacion->padding(false);
-				$sql = $conexion->prepare('select id_tipo_cliente, tipo_cliente, descripcion from tipo_cliente LIMIT '. (($paginacion->get_page() - 1) * $filas) . ', ' . $filas);
+				$sql = $conexion->prepare('select id_tipo_cliente, nombre, beneficios from tipo_membresia LIMIT '. (($paginacion->get_page() - 1) * $filas) . ', ' . $filas);
 				$sql->execute();
 				$resultado = $sql->fetchAll();
 				foreach ($resultado as $filas) {
 					echo '
 		 				<tbody>
 					        <tr>
-					            <td>'.$filas['tipo_cliente'].'</td>
-					            <td>'.$filas['descripcion'].'</td>
+					            <td>'.$filas['nombre'].'</td>
+					            <td>'.$filas['beneficios'].'</td>
 					            <td><p><a href="modificar.php?id='.$filas['id_tipo_cliente'].'" class="btn btn-warning">Consultar/Modificar</a>
 					             <a href="eliminar.php?id='.$filas['id_tipo_cliente'].'" class="btn btn-danger">Eliminar</a></p></td>
 					        </tr>
