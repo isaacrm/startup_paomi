@@ -111,7 +111,7 @@ if(!empty($_POST)) {
 						</select>
 				</div>
 				<div class="form-group">
-					<textarea class="form-control" name="desc" rows="3"></textarea>
+					<textarea class="form-control" name="desc" rows="3" placeholder="Beneficios"></textarea>
 				</div>
 
 				<button type="submit" class="btn btn-danger">Ingresar</button>
