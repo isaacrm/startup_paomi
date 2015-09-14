@@ -42,33 +42,15 @@
 			<header id="header">
 
 				<!-- logo -->
-					<figure> <img src="images/logo.png" alt="Logo" width="64" height="64">
-</figure>
-
+					<figure> <img src="images/logo.png" alt="Logo" width="64" height="64"></figure>
 				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html#intro">Sheer</a></li>
-							<li><a href="index.html#one">Que Es Sheer Boxes</a></li>
-							<li><a href="index.html#plus">Ahorra</a></li>
-                                                        <li><a href="index.html">Nuestro Concepto</a></li>
-	                                                <li><a href="index.html#marcas">Marcas</a></li>
-	                                                <li><a href="preguntas.html#questions">Preguntas Frecuentes</a></li>
-	                                                <li><a href="index.html#contact">Contactanos</a></li>
-                                                     <li><a href="creadoras.html#creadoras">Las Creadoras</a></li>      
-                                                      
-						</ul>
-					</nav>
-
+				<?php include 'maestros/menu.php'?>
 			</header>
-
 			<section id="intro" class="main style1 dark fullscreen">
 				<div class="content container 35%">
-					
 					<header>
 						<font color=#F7819F><h2>Las Creadoras</h2></font>
 					</header>
-					<font color=#424242><p> 
 						<center><p align="center"><b>¿Porque decidimos crear SheerBoxes?</b> </center>
 </p>
  <h3>♥MICHELLE SORTO</h3>

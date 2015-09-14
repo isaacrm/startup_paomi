@@ -34,25 +34,10 @@
 	</div>
 		<!-- Header -->
 			<header id="header">
-
 				<!-- logo -->
-					<figure> <img src="images/logo.png" alt="Logo" width="56" height="56">
-</figure>
-
+					<figure> <img src="images/logo.png" alt="Logo" width="56" height="56"></figure>
 				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro">Sheer</a></li>
-							<li><a href="#one">Que Es Sheer Boxes</a></li>
-							<li><a href="#plus">Suscripcion</a></li>
-                            <li><a href="#two">Nuestro Concepto</a></li>
-							<li><a href="#marcas">Productos</a></li>
-							<li><a href="preguntas.html">Preguntas Frecuentes</a></li>
-							<li><a href="#contact">Contactanos</a></li>
-							<li><a href="creadoras.html">Las Creadoras</a></li>
-						</ul>
-					</nav>
-
+				<?php include 'maestros/menu.php'?>
 			</header>
 
 		<!-- Intro -->

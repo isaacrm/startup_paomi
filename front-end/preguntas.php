@@ -46,20 +46,7 @@
 </figure>
 
 				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html#intro">Sheer</a></li>
-							<li><a href="index.html#one">Que Es Sheer Boxes</a></li>
-							<li><a href="index.html#plus">Ahorra</a></li>
-                                                        <li><a href="index.html">Nuestro Concepto</a></li>
-	                                                <li><a href="index.html#marcas">Marcas</a></li>
-	                                                <li><a href="preguntas.html#questions">Preguntas Frecuentes</a></li>
-	                                                <li><a href="index.html#contact">Contactanos</a></li>
-                                                     <li><a href="creadoras.html#">Las Creadoras</a></li>   
-                                                        
-                                                      
-						</ul>
-					</nav>
+				<?php include 'maestros/menu.php'?>
 
 			</header>
 
