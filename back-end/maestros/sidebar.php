@@ -9,6 +9,7 @@
             <li><a href="../productos/ver.php"><i class="fa fa-link"></i> <span>Productos</span></a></li>
             <li><a href="../cargos/ver.php"><i class="fa fa-link"></i> <span>Cargos de Empleados</span></a></li>
             <li><a href="../empleados/ver.php"><i class="fa fa-link"></i> <span>Empleados</span></a></li>
+            <li><a href="../marcas/ver.php"><i class="fa fa-link"></i> <span>Marcas</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

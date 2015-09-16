@@ -51,7 +51,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue sidebar-mini" oncontextmenu="return false" onkeydown="return false" onselectstart="return false" ondragstart="return false">
+<body class="hold-transition skin-blue sidebar-mini" oncontextmenu="return false"  onselectstart="return false" ondragstart="return false">
 <div class="wrapper">
 
     <!-- Main Header -->
