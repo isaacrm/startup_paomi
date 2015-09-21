@@ -48,7 +48,7 @@ if(!empty($_POST)) {
 					echo "<br/>Guardado en: " . "../../../imagenes//img_membresia/" . strip_tags($_POST['nombre']) . ".jpg";
 					$sql = $conexion->prepare("update tipo_membresia set nombre='" . strip_tags($_POST['nombre']) . "', imagen='" . $url . "', beneficios='" . strip_tags($_POST['desc']) . "', duracion='" . $_POST['duracion'] . "' where id_tipo_cliente=" . $_POST['ids']);
 					$sql->execute();
-
+					rename(strip_tags($_POST['imagen']),"../../../imagenes/img_membresia/". strip_tags($_POST['nombre']) . ".jpg" ) ;
 					header("location: ver.php");
 				}
 			}else {

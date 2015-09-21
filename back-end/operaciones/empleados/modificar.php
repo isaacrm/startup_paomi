@@ -31,7 +31,7 @@ if(!empty($_POST)) {
         <div class="container" style="overflow-Y:scroll; height:auto; width:100%;">
             <?php
             $db = conectaDB();
-            $sql = $db->prepare("Select * from empleados where id_empleado=".$_GET['id']);
+            $sql = $db->prepare("Select * from empleados,cargo_emp where empleados.id_cargo=cargo_emp.id_cargo and id_empleado=".$_GET['id']);
             $sql->execute();
             $resultado = $sql->fetchAll();
             foreach ($resultado as $fila) {
@@ -65,6 +65,12 @@ if(!empty($_POST)) {
 	    <label for="">Correo</label>
 	    <input type="email" class="form-control"  name="correo" placeholder="Correo" value="'.$fila['correo_empleado'].'" required/>
 	  </div>
+	  <div class="form-group">
+                        <label for="">Cargo</label>
+                        <select class="form-control" name="tipo" required>
+					<option value='.$fila['id_cargo'].'>'.$fila['nombre_cargo'].'</option>
+                        </select>
+                    </div>
 	  <button type="submit" class="btn btn-danger">Modificar</button>
 	  <a href="ver.php" class="btn btn-danger">Regresar</a>
 	  <input value="'.$_GET['id'].'" type="hidden" name="ids">

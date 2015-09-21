@@ -26,7 +26,6 @@ if(!isset($_SESSION['id'])){
 					<th>Producto</th>
 					<th>Precio</th>
 					<th>Marca</th>
-					<th>Tipo</th>
 					<th>Operaciones</th>
 				</tr>
 				</thead>
@@ -43,7 +42,7 @@ if(!isset($_SESSION['id'])){
 				$paginacion->records($contador);
 				$paginacion->records_per_page($filas);
 				$paginacion->padding(false);
-				$sql = $conexion->prepare('select * from productos  LIMIT '. (($paginacion->get_page() - 1) * $filas) . ', ' . $filas);
+				$sql = $conexion->prepare('select id_producto, nombre_producto, precio, nombre from productos, marcas where productos.id_marca=marcas.id_marca LIMIT '. (($paginacion->get_page() - 1) * $filas) . ', ' . $filas);
 				$sql->execute();
 				$resultado = $sql->fetchAll();
 				foreach ($resultado as $filas) {
@@ -52,9 +51,7 @@ if(!isset($_SESSION['id'])){
 					        <tr>
 					            <td>'.$filas['nombre_producto'].'</td>
 					            <td>'.$filas['precio'].'</td>
-					            <td>'.$filas['marca_producto'].'</td>
-					            <td>'.$filas['id_producto'].'</td>
-
+					            <td>'.$filas['nombre'].'</td>
 					            <td><p><a href="modificar.php?id='.$filas['id_producto'].'" class="btn btn-warning">Consultar/Modificar</a>
 					            <a href="eliminar.php?id='.$filas['id_producto'].'" class="btn btn-danger">Eliminar</a></p></td>
 					        </tr>

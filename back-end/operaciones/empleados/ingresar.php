@@ -94,7 +94,7 @@ if(!isset($_SESSION['id'])){
                             $resultado = $sql->fetchAll();
                             foreach ($resultado as $fila) {
                                 echo '
-		  					 <option value='.$fila['nombre_cargo'].'>'.$fila['nombre_cargo'].'</option>
+		  					 <option value='.$fila['id_cargo'].'>'.$fila['nombre_cargo'].'</option>
 		  				';
                             }
                             ?>

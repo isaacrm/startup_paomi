@@ -6,13 +6,13 @@
 	//consulta para obtner datos especificos y iniciar sesion
 	#Obtenemos el id de la persona, para hacer la comprobacion 
 	$cc =  md5($_POST['contra']);
-	$sql_query = $conexion->prepare('SELECT id_empleado, cargo_empleado FROM empleados WHERE usuario_empleado = ? AND contra_empleado = ?');
+	$sql_query = $conexion->prepare('SELECT id_empleado, id_cargo FROM empleados WHERE usuario_empleado = ? AND contra_empleado = ?');
 	$sql_query->bindParam(1, $usuario);
 	$sql_query->bindParam(2, $cc);
 	$sql_query->execute();
 	$resultado = $sql_query->fetchAll();
 	foreach ($resultado as $key) {
-		$_SESSION['id'] = $key['id_empleado'];
+		$_SESSION['id_cliente'] = $key['id_empleado'];
 		$_SESSION['usuario'] = $usuario;
 		$_SESSION['cargo_empleado'] = $key['cargo_empleado'];
 	}
@@ -23,6 +23,7 @@
 	{
 		echo "<script>
 			alert('Datos erroneos');
+			window.location.href='login.php';
 		</script>";
 	}
 ?>
